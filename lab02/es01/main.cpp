@@ -13,19 +13,19 @@ int main(){
 
     filein.open("file_1.txt", ios::in);
     if(!filein.is_open()){
-        cout<<"Errore nell'apertura del file di input";
+        cout<<"Error during opening input file";
         return EXIT_FAILURE;
     }
 
     fileout2.open("file_2.txt", ios::out | ios::binary | ios::in);
     if(!fileout2.is_open()){
-        cout<<"Errore nell'apertura del file di output 2";
+        cout<<"Error during opening output file 2";
         return EXIT_FAILURE;
     }
 
     fileout3.open("file_3.txt", ios::out);
     if(!fileout3.is_open()){
-        cout<<"Errore nell'apertura del file di output 3";
+        cout<<"Error during opening output file 3";
         return EXIT_FAILURE;
     }
 
