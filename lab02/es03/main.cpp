@@ -59,6 +59,5 @@ bool empty(vector<int> s){
         return true;
     }else{
         cout << "Stack not empty";
-        return false;
     }
 }
