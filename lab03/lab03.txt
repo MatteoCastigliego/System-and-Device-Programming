@@ -19,6 +19,8 @@ Adjust the stack and the queue programs written during laboratory number 2 to:
 - Use templates
 - Use both libraries together in the same programs.
 Is it possible to insert different data types in both containers from the same client program?
+Answer: yes if we suppose to have two different containers of two different types; it's not possible to insert different data types
+        in the same container
 
 
 
