@@ -6,14 +6,14 @@
 #include <algorithm>
 using namespace std;
 
-bool check_name_presence(vector<string> ST, char name[]);
+bool check_name_presence(vector<string> ST, string name);
 void print_names_in_lexicographical_order(vector<string> ST);
-int get_index_by_name(vector<string> ST, char name[]);
+int get_index_by_name(vector<string> ST, string name);
 string get_name_by_id(vector<string> ST, int index);
 void print_names_in_lexicographical_order(vector<string> ST, vector<list<string>> list, string name);
 
 int main(){
-    char name1[30], name2[30];
+    string name1, name2;
     vector<string> symble_table;
     string initial_string = {};
     
@@ -67,7 +67,7 @@ int main(){
 
 }
 
-bool check_name_presence(vector<string> ST, char name[]){
+bool check_name_presence(vector<string> ST, string name){
     return find(ST.begin(), ST.end(), name) != ST.end();
 }
 
