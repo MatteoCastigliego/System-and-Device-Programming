@@ -10,7 +10,7 @@ bool check_name_presence(vector<string> ST, char name[]);
 void print_names_in_lexicographical_order(vector<string> ST);
 int get_index_by_name(vector<string> ST, char name[]);
 string get_name_by_id(vector<string> ST, int index);
-void print_friends(vector<list<string>>, string name);
+void print_names_in_lexicographical_order(vector<string> ST, vector<list<string>> list, string name);
 
 int main(){
     char name1[30], name2[30];
@@ -58,7 +58,7 @@ int main(){
     cout << "Insert person name you want to know friends: ";
     cin >> name;
 
-    print_friends(adjacency_list, name);
+    print_names_in_lexicographical_order(symble_table, adjacency_list, name);
 
 }
 
@@ -69,4 +69,21 @@ bool check_name_presence(vector<string> ST, char name[]){
 void print_names_in_lexicographical_order(vector<string> ST){
     sort(ST.begin(), ST.end());
     for_each(ST.begin(), ST.end(), [](string name){cout << name << ' ';});
+}
+
+int get_index_by_name(vector<string> ST, string name){
+    for(int i = 0; i < ST.size(); i++){
+        if(ST[i] == name) return i;
+    }
+    return -1;
+}
+
+string get_name_by_id(vector<string> ST, int index){
+    return ST[index];
+}
+
+void print_names_in_lexicographical_order(vector<string> ST, vector<list<string>> list, string name){
+    int index = get_index_by_name(ST, name);
+    sort(list[index].begin(), list[index].end());
+    for_each(list[index].begin(), list[index].end(), [](string name){cout << name << ' ';});
 }
