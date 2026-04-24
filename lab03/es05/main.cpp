@@ -60,6 +60,11 @@ int main(){
 
     print_names_in_lexicographical_order(symble_table, adjacency_list, name);
 
+    /* For the last point we could do a Depth-First Search(DFS) or a Breadth-First Search(BFS). 
+       The result is the same but BFS guarantees the shortest path, DFS gives a path that could
+       not be che shortest
+    */
+
 }
 
 bool check_name_presence(vector<string> ST, char name[]){
