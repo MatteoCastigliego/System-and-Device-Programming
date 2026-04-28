@@ -47,9 +47,6 @@ int main(){
         int index1 = get_index_by_name(symble_table, name1);
         int index2 = get_index_by_name(symble_table ,name2);
 
-        if(adjacency_list[index1].empty()) adjacency_list[index1].push_back(initial_string);
-        if(adjacency_list[index2].empty()) adjacency_list[index2].push_back(initial_string);
-
         adjacency_list[index1].push_back(get_name_by_id(symble_table, index2));
         adjacency_list[index2].push_back(get_name_by_id(symble_table, index1));
     }
